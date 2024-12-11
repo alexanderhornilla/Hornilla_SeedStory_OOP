@@ -6,7 +6,8 @@ administrative burdens. By allowing such features as sorted browsing, real-time 
 the system enables customer satisfaction and helps expand the business by way of data-driven sales and inventory performance. Lastly, it aligns with the shop's 
 mission to reliably and conveniently deliver quality seeds while being sustainable and operationally excellent.
 
-Included Features: 
+Included Features:
+
     1. Product Variety: People can try to sort the seeds in numerous ways (by name, growth duration, and sales per week).
 
     2. Inventory: Seeds will be stored in groups arranged by seed name or kind, except for the time to grow, breeder, and weeks to grow, including the price for 
@@ -20,6 +21,7 @@ Included Features:
     5. User-Friendly Navigation: The system comprises intuitive menus for sorting, selecting, and buying seeds to enrich the customer experience.
     
 Excluded Features:
+
     1. Online Payment: The system does not support payment processing through online platforms.
     
     2. Multi-Language Support: It operates in a single language and does not cater to multilingual users.
@@ -29,6 +31,7 @@ Excluded Features:
     4. Customer Feedback: No functionality exists for collecting or managing customer feedback.
 
 Achievable Outcomes:
+
     1. Improved Sales Tracking: Enable the ability to track seed sales, inventory, and customer transactions in full details up to 100% with the operational 
     database within the first month from deployment.
 
@@ -42,11 +45,11 @@ Achievable Outcomes:
 II. OOP PRINCIPLES
 
 1. Encapsulation
+   
 Encapsulation ensures that an object's internal state is protected from unintended interference and misuse by hiding its fields and providing controlled access through 
 methods.
 
-Implementation: In the Product class, fields like **name, growthWeeks, breeder, weight, weeklySales, price, and stock** are declared as **private**. These fields are
-accessed and modified only through public methods, such as **getters (getName(), getPrice()) and setters (e.g., reduceStock())**.
+Implementation: In the Product class, fields like **name, growthWeeks, breeder, weight, weeklySales, price, and stock** are declared as **private**. These fields are accessed and modified only through public methods, such as **getters (getName(), getPrice()) and setters (e.g., reduceStock())**.
 
 Example:
 
@@ -58,11 +61,12 @@ public void reduceStock(int quantity) {
     this.stock -= quantity;
 }
 
+
 2. Inheritance
+   
 Inheritance allows a class to derive properties and behaviors from another class, promoting code reuse.
 
-Implementation: The **Seed class inherits the Product class** using the extends keyword.
-Seed gains all the attributes and behaviors of Product, like **getPrice(), getName(), and reduceStock()**.
+Implementation: The **Seed class inherits the Product class** using the extends keyword. Seed gains all the attributes and behaviors of Product, like **getPrice(), getName(), and reduceStock()**.
 
 Example:
 
@@ -78,7 +82,9 @@ public class Seed extends Product {
     }
 }
 
+
 3. Polymorphism
+   
 Polymorphism allows objects to be treated as instances of their parent class while behaving differently based on their actual class.
 
 Implementation: The Product class declares an **abstract display() method**.
@@ -94,11 +100,12 @@ public void display() { // in Seed class
         getName(), getGrowthWeeks(), getBreeder(), getWeight(), getWeeklySales(), getPrice(), getStock());
 }
 
+
 4. Abstraction
+
 Abstraction hides the complex implementation details and shows only the necessary features of an object.
 
-Implementation: The Product class is marked as abstract because it serves as a template for all products but doesn't directly implement all behaviors (e.g., the display
-() method is abstract). Concrete subclasses like Seed must implement the display() method.
+Implementation: The Product class is marked as abstract because it serves as a template for all products but doesn't directly implement all behaviors (e.g., the display () method is abstract). Concrete subclasses like Seed must implement the display() method.
 
 Example:
 
@@ -140,23 +147,30 @@ support of the agri-preneurs.
 
 IV. PROGRAM/SYSTEM INSTRUCTIONS
 1. Main Menu: After the initial setup, the program will display the main menu for interaction.
-
+   
     -----------MAIN MENU-------------
+   
     (1) Browse Products
+   
     (2) View Cart and Checkout
-
+   
     (3) Exit
+   
     ---------------------------------
     Enter your choice (1-3):
 
-2. Browse Products: If you choose option 1 to browse products, you'll see the sort menu.
+3. Browse Products: If you choose option 1 to browse products, you'll see the sort menu.
 
-    --------Sort Products By:--------
+    ---------Sort Products By:--------
+   
     (1) Name (A-Z)
+   
     (2) Growth Duration (Weeks)
+   
     (3) Weekly Sales
-
+   
     (4) BACK
+   
     ---------------------------------
     Your choice (1-4):
 
@@ -184,7 +198,6 @@ Example interaction:
     (1) Name (A-Z)
     (2) Growth Duration (Weeks)
     (3) Weekly Sales
-
     (4) BACK
     ---------------------------------
     Your choice (1-4):
@@ -192,7 +205,7 @@ Example interaction:
 4. View Cart and Checkout: If you choose option 2 to checkout, the cart summary will be shown.
 
     CART SUMMARY - SEEDSTORY
-    -----------------------------------------------------------------------------
+---------------------------------------------------------------------------------
     SEED NAME       SEED BREEDER        PRICE(PHP)   QUANTITY       TOTAL(PHP)
     -----------------------------------------------------------------------------
     Carrot          XYZ Seeds           30.00        6              180.00
